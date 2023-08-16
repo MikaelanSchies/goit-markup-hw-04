@@ -44,6 +44,8 @@ header {
 .navigation {
   display: flex;
   align-items: center;
+  position: relative;
+  color: #404bbf;
 }
 
 .navigation ::after {
