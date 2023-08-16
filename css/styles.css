@@ -27,6 +27,8 @@ header {
   line-height: 1.17;
   letter-spacing: 0.03em;
   border-bottom: 1px solid #e7e9fc;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .container {
@@ -42,6 +44,16 @@ header {
 .navigation {
   display: flex;
   align-items: center;
+}
+
+.navigation ::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  height: 4px;
+  background-color: #404bbf;
+  border-radius: 2px;
 }
 
 .link {
@@ -63,6 +75,9 @@ header {
   letter-spacing: 0.03em;
   display: flex;
   margin-right: 76px;
+  position: relative;
+  color: #404bbf;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .logo:root {
@@ -135,6 +150,8 @@ img {
     ),
     url(../images/images/people-office\ 1.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .visually-hidden {
@@ -181,6 +198,7 @@ img {
   border: none;
   border-radius: 4px;
   margin: 0 auto;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .main-button:hover,
@@ -219,6 +237,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 8px;
 }
 
 .main-second-section {
@@ -324,25 +343,40 @@ img {
   justify-content: center;
   align-items: center;
   gap: 24px;
+  padding-left: 0;
 }
 
 .fourth-section-items-icons {
   width: 40px;
   height: 40px;
+}
+
+.fourth-section-social-networks {
+  width: 100%;
+  height: 100%;
+  background-color: #4d5ae5;
   border-radius: 50%;
-  background-color: var(--iris, #4d5ae5);
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fourth-section-social-networks:hover,
+.fourth-section-social-networks:focus {
+  background-color: #404bbf;
 }
 
 .fourth-section-icons {
-  width: 16px;
-  height: 16px;
   fill: #f4f4fd;
 }
 
 /*П*ята секція*/
+
+.five-section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
 
 .five-section-main-text {
   color: var(--navyblue, #2e2f42);
@@ -351,9 +385,13 @@ img {
   font-size: 36px;
   font-style: normal;
   font-weight: 700;
-  line-height: 40px; /* 111.111% */
-  letter-spacing: 0.72px;
+  line-height: 1.11; /* 111.111% */
   text-transform: capitalize;
+  margin-bottom: 72px;
+}
+
+.five-section-main-text:root {
+  color: #2e2f42;
 }
 
 .five-section-list {
@@ -363,8 +401,23 @@ img {
   gap: 24px;
 }
 
+.five-section-link {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #8e8f99;
+}
+
+.five-section-link:root {
+  color: #8e8f99;
+}
+
 .five-section-items {
-  width: 168px;
+  width: calc((100% - 120px) / 6);
   height: 88px;
   display: inline-flex;
   align-items: flex-start;
@@ -544,6 +597,7 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .email:root {
@@ -560,6 +614,7 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .phone:hover,
