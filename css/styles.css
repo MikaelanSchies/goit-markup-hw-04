@@ -655,7 +655,9 @@ img {
 
 .link-items:hover,
 .link-items:focus {
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
 .items-page-container {
@@ -678,8 +680,8 @@ img {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.items-page-paragraph:hover,
-.items-page-paragraph:focus {
+.link-items:hover .items-page-paragraph,
+.link-items:focus .items-page-paragraph {
   transform: translateY(0%);
 }
 
